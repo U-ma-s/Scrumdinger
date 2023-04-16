@@ -11,6 +11,7 @@ import SwiftUI
 struct DetailEditView: View {
     
     @State private var scrum = DailyScrum.emptyScrum
+    @State private var newAttendeeName = ""
     
     var body: some View {
         Form {
@@ -21,14 +22,39 @@ struct DetailEditView: View {
                         //closure内で()-> view な関数処理としてtextを宣言．これは非表示でアクセシビリティに使用．
                         Text("Length")
                     }
+                    .accessibilityValue("\(scrum.lengthInMinutes) minutes")
                     Spacer()
                     Text("\(scrum.lengthInMinutes) minutes")//ここはsourh of truthを変更しない（読み取りのみ）ので$不要．
-                    
+                        .accessibilityHidden(true)
                 }
-        
             } header: {
                 Text("Meeting Info")
             }
+            Section {
+                ForEach(scrum.attendees) { attendee in//既存の参加者
+                    Text(attendee.name)
+                }
+                .onDelete { indices in
+                    scrum.attendees.remove(atOffsets: indices)
+                }
+                HStack {
+                    TextField("New Attendee", text: $newAttendeeName)//新規追加する参加者名を保持する．textfeildを$でnewAttendeeと同期
+                    Button(action: {
+                        withAnimation {
+                            let attendee = DailyScrum.Attendee(name: newAttendeeName)//ここではnewAttendeeを参照するだけなので$不要
+                            scrum.attendees.append(attendee)
+                            newAttendeeName = ""
+                        }
+                    }) {
+                        Image(systemName: "plus.circle.fill")
+                            .accessibilityLabel("Add attendee")
+                    }
+                    .disabled(newAttendeeName.isEmpty)
+                }
+            } header: {
+                Text("Attendees")
+            }
+
 
         }
     }

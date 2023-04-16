@@ -35,7 +35,7 @@ struct DailyScrum: Identifiable {
 }
 
 extension DailyScrum {
-    struct Attendee: Identifiable {
+    struct Attendee: Identifiable {//各個人．初期化時に名前を要求
         let id: UUID
         var name: String
         
