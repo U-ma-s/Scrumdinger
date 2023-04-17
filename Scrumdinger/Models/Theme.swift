@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum Theme: String {
+enum Theme: String, Identifiable, CaseIterable {//CaseIterableに準拠することで，enumの全ての要素にallCasesでアクセスできる
     case bubblegum
     case buttercup
     case indigo
@@ -38,5 +38,9 @@ enum Theme: String {
     
     var name: String {
         rawValue.capitalized//case名を大文字に
+    }
+    
+    var id: String {
+        name
     }
 }

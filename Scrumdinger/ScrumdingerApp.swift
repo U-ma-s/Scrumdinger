@@ -10,9 +10,11 @@ import SwiftUI
 
 @main
 struct ScrumdingerApp: App {
+    @State private var scrums = DailyScrum.sampleData//ここがsource of trurhの大元．
+    
     var body: some Scene {
         WindowGroup {
-            ScrumsView(scrums: DailyScrum.sampleData)
+            ScrumsView(scrums: $scrums)//子ビューたちに`@State`プロパティへのbindingを渡していく
         }
     }
 }

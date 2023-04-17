@@ -44,7 +44,7 @@ extension DailyScrum {
             self.name = name
         }
     }
-    static var emptyScrum: DailyScrum{
+    static var emptyScrum: DailyScrum{//EditDetailViewでユーザー入力の受け皿として使用
         DailyScrum(title: "", attendees: [], lengthInMinutes: 5, theme: .sky)
     }
 }

@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct DetailView: View {
-    let scrum: DailyScrum
+    //let scrum: DailyScrum //ScrumsViewからDetailViewを呼び出す際に初期化される．タップされた行のスクラムの情報を受け取る//後々bindingになる？
+    @Binding var scrum: DailyScrum
     
+    @State private var editingScrum = DailyScrum.emptyScrum//編集用の`@State`プロパティを宣言しておき，編集viewにbindingで参照を渡す
     @State private var isPresentingEditView = false
     
     var body: some View {
@@ -40,7 +42,7 @@ struct DetailView: View {
             } header: {
                 Text("Meeting Info")
             }
-    
+            
             Section {
                 ForEach(scrum.attendees) { attendeee in
                     Label(attendeee.name, systemImage: "person")
@@ -48,18 +50,19 @@ struct DetailView: View {
             } header: {
                 Text("Attendees")
             }
-
-
+            
+            
         }
         .navigationTitle(scrum.title)
         .toolbar {
             Button("Edit") {
                 isPresentingEditView = true
+                editingScrum = scrum//既存の設定を編集用のデータにコピーしておく
             }
-            }
+        }
         .sheet(isPresented: $isPresentingEditView) {
             NavigationStack {
-                DetailEditView()
+                DetailEditView(scrum: $editingScrum)//編集viewに編集用データへのbindingを渡す
                     .navigationTitle(scrum.title)
                     .toolbar {
                         
@@ -72,6 +75,7 @@ struct DetailView: View {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") {
                                 isPresentingEditView = false
+                                scrum = editingScrum
                             }
                         }
                     }
@@ -83,7 +87,7 @@ struct DetailView: View {
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            DetailView(scrum: DailyScrum.sampleData[0])
+            DetailView(scrum: .constant(DailyScrum.sampleData[0]))
         }
     }
 }
