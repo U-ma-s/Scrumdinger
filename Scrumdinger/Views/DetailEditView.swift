@@ -10,7 +10,6 @@ import SwiftUI
 
 struct DetailEditView: View {
     
-    //@State private var scrum = DailyScrum.emptyScrum//ユーザーの入力の受け皿として使用
     @Binding var scrum: DailyScrum//編集元のデータとしてDetailViewの`@State`プロパティをbindingで受け取る．このviewで更新すると，親ビューでも反映される
     @State private var newAttendeeName = ""
     
@@ -64,6 +63,6 @@ struct DetailEditView: View {
 
 struct DetailEditView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailEditView(scrum: .constant(DailyScrum.sampleData[0]))//`@Binding`プロパティの初期化に必要なbindingデータを.constantで作れるのか
+        DetailEditView(scrum: .constant(DailyScrum.sampleData[0]))//`@Binding`プロパティの初期化に必要なbindingを.constantで作れる
     }
 }

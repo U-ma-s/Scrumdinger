@@ -20,6 +20,10 @@
 		AADFBB1229EC3EC8002F33C8 /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFBB1129EC3EC8002F33C8 /* DetailEditView.swift */; };
 		AADFBB1429ECC209002F33C8 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFBB1329ECC209002F33C8 /* ThemeView.swift */; };
 		AADFBB1629ED6E8A002F33C8 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFBB1529ED6E8A002F33C8 /* ThemePicker.swift */; };
+		AADFBB1929F410C0002F33C8 /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = AADFBB1829F410C0002F33C8 /* ding.wav */; };
+		AADFBB1B29F4154F002F33C8 /* ScrumTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFBB1A29F4154F002F33C8 /* ScrumTimer.swift */; };
+		AADFBB1D29F4162D002F33C8 /* AVPlayer+Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFBB1C29F4162D002F33C8 /* AVPlayer+Ding.swift */; };
+		AADFBB1F29F4165A002F33C8 /* ScrumProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFBB1E29F4165A002F33C8 /* ScrumProgressViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		AADFBB1129EC3EC8002F33C8 /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 		AADFBB1329ECC209002F33C8 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
 		AADFBB1529ED6E8A002F33C8 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
+		AADFBB1829F410C0002F33C8 /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
+		AADFBB1A29F4154F002F33C8 /* ScrumTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumTimer.swift; sourceTree = "<group>"; };
+		AADFBB1C29F4162D002F33C8 /* AVPlayer+Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Ding.swift"; sourceTree = "<group>"; };
+		AADFBB1E29F4165A002F33C8 /* ScrumProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumProgressViewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +77,12 @@
 		AADFBAF429EA883C002F33C8 /* Scrumdinger */ = {
 			isa = PBXGroup;
 			children = (
+				AADFBB1729F410AA002F33C8 /* Resources */,
 				AADFBB0329EA8CF6002F33C8 /* Models */,
 				AADFBAF529EA883C002F33C8 /* ScrumdingerApp.swift */,
 				AADFBB1029EC3EB6002F33C8 /* Views */,
 				AADFBAF929EA883D002F33C8 /* Assets.xcassets */,
 				AADFBAFB29EA883D002F33C8 /* Preview Content */,
-				AADFBB0A29EAA48B002F33C8 /* TrailingIconLabelStyle.swift */,
 			);
 			path = Scrumdinger;
 			sourceTree = "<group>";
@@ -92,6 +100,8 @@
 			children = (
 				AADFBB0429EA8DF2002F33C8 /* Theme.swift */,
 				AADFBB0629EA8F99002F33C8 /* DailyScrum.swift */,
+				AADFBB1A29F4154F002F33C8 /* ScrumTimer.swift */,
+				AADFBB1C29F4162D002F33C8 /* AVPlayer+Ding.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -106,8 +116,18 @@
 				AADFBB1129EC3EC8002F33C8 /* DetailEditView.swift */,
 				AADFBB1329ECC209002F33C8 /* ThemeView.swift */,
 				AADFBB1529ED6E8A002F33C8 /* ThemePicker.swift */,
+				AADFBB0A29EAA48B002F33C8 /* TrailingIconLabelStyle.swift */,
+				AADFBB1E29F4165A002F33C8 /* ScrumProgressViewStyle.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AADFBB1729F410AA002F33C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AADFBB1829F410C0002F33C8 /* ding.wav */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADFBB1929F410C0002F33C8 /* ding.wav in Resources */,
 				AADFBAFD29EA883D002F33C8 /* Preview Assets.xcassets in Resources */,
 				AADFBAFA29EA883D002F33C8 /* Assets.xcassets in Resources */,
 			);
@@ -182,10 +203,13 @@
 			files = (
 				AADFBB1629ED6E8A002F33C8 /* ThemePicker.swift in Sources */,
 				AADFBB0729EA8F99002F33C8 /* DailyScrum.swift in Sources */,
+				AADFBB1F29F4165A002F33C8 /* ScrumProgressViewStyle.swift in Sources */,
 				AADFBB0F29EACAEA002F33C8 /* DetailView.swift in Sources */,
+				AADFBB1D29F4162D002F33C8 /* AVPlayer+Ding.swift in Sources */,
 				AADFBB1229EC3EC8002F33C8 /* DetailEditView.swift in Sources */,
 				AADFBB0B29EAA48B002F33C8 /* TrailingIconLabelStyle.swift in Sources */,
 				AADFBB0529EA8DF2002F33C8 /* Theme.swift in Sources */,
+				AADFBB1B29F4154F002F33C8 /* ScrumTimer.swift in Sources */,
 				AADFBB0D29EAACB7002F33C8 /* ScrumsView.swift in Sources */,
 				AADFBAF829EA883C002F33C8 /* MeetingView.swift in Sources */,
 				AADFBAF629EA883C002F33C8 /* ScrumdingerApp.swift in Sources */,
@@ -326,6 +350,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,6 +379,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
