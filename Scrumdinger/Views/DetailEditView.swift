@@ -10,7 +10,7 @@ import SwiftUI
 
 struct DetailEditView: View {
     
-    @Binding var scrum: DailyScrum//編集元のデータとしてDetailViewの`@State`プロパティをbindingで受け取る．このviewで更新すると，親ビューでも反映される
+    @Binding var scrum: DailyScrum//編集元のデータとしてDetailViewの`@State`プロパティをbindingで受け取る．このviewで更新すると，親(DetailView)ビューでも反映される
     @State private var newAttendeeName = ""
     
     var body: some View {
