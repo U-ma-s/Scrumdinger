@@ -22,6 +22,7 @@ struct DailyScrum: Identifiable {
         }
     }
     var theme: Theme
+    var history: [History] = []
     
     //イニシャライザでidプロパティにデフォルト値を割り当てるイニシャライザを追加．パラメータにデフォルト値を定義しておくと、イニシャライザや関数を呼び出す際に、そのパラメータを省略できる
     init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
