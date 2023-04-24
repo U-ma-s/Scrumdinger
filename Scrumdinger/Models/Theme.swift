@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum Theme: String, Identifiable, CaseIterable {//CaseIterableに準拠することで，enumの全ての要素にallCasesでアクセスできる
+enum Theme: String, Identifiable, CaseIterable, Codable {//CaseIterableに準拠することで，enumの全ての要素にallCasesでアクセスできる
     case bubblegum
     case buttercup
     case indigo

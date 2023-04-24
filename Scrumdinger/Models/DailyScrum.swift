@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DailyScrum: Identifiable {
+struct DailyScrum: Identifiable, Codable {
     let id: UUID
     var title: String
     var attendees: [Attendee]
@@ -36,7 +36,7 @@ struct DailyScrum: Identifiable {
 }
 
 extension DailyScrum {
-    struct Attendee: Identifiable {//各個人．初期化時に名前を要求
+    struct Attendee: Identifiable, Codable {//各個人．初期化時に名前を要求
         let id: UUID
         var name: String
         
