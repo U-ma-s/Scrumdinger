@@ -64,6 +64,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA0FB0CC29F644D20046A220 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				AADFBB0E29EACAEA002F33C8 /* DetailView.swift */,
+				AADFBB1129EC3EC8002F33C8 /* DetailEditView.swift */,
+				AA0FB0CA29F63AF60046A220 /* NewScrumSheet.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		AA0FB0CD29F645020046A220 /* Meeting */ = {
+			isa = PBXGroup;
+			children = (
+				AADFBAF729EA883C002F33C8 /* MeetingView.swift */,
+				AADFBB0829EA90DB002F33C8 /* CardView.swift */,
+				AADFBB1E29F4165A002F33C8 /* ScrumProgressViewStyle.swift */,
+				AA0FB0C629F42C8F0046A220 /* MeetingHeaderView.swift */,
+				AA0FB0C829F4B0550046A220 /* MeetingFooterView.swift */,
+			);
+			path = Meeting;
+			sourceTree = "<group>";
+		};
+		AA0FB0CE29F645330046A220 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				AADFBB1329ECC209002F33C8 /* ThemeView.swift */,
+				AADFBB1529ED6E8A002F33C8 /* ThemePicker.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		AADFBAE929EA883C002F33C8 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +135,7 @@
 		AADFBB0329EA8CF6002F33C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AADFBB0A29EAA48B002F33C8 /* TrailingIconLabelStyle.swift */,
 				AADFBB0429EA8DF2002F33C8 /* Theme.swift */,
 				AADFBB0629EA8F99002F33C8 /* DailyScrum.swift */,
 				AADFBB1A29F4154F002F33C8 /* ScrumTimer.swift */,
@@ -115,18 +147,10 @@
 		AADFBB1029EC3EB6002F33C8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AADFBAF729EA883C002F33C8 /* MeetingView.swift */,
-				AADFBB0829EA90DB002F33C8 /* CardView.swift */,
+				AA0FB0CD29F645020046A220 /* Meeting */,
 				AADFBB0C29EAACB7002F33C8 /* ScrumsView.swift */,
-				AADFBB0E29EACAEA002F33C8 /* DetailView.swift */,
-				AADFBB1129EC3EC8002F33C8 /* DetailEditView.swift */,
-				AADFBB1329ECC209002F33C8 /* ThemeView.swift */,
-				AADFBB1529ED6E8A002F33C8 /* ThemePicker.swift */,
-				AADFBB0A29EAA48B002F33C8 /* TrailingIconLabelStyle.swift */,
-				AADFBB1E29F4165A002F33C8 /* ScrumProgressViewStyle.swift */,
-				AA0FB0C629F42C8F0046A220 /* MeetingHeaderView.swift */,
-				AA0FB0C829F4B0550046A220 /* MeetingFooterView.swift */,
-				AA0FB0CA29F63AF60046A220 /* NewScrumSheet.swift */,
+				AA0FB0CC29F644D20046A220 /* Detail */,
+				AA0FB0CE29F645330046A220 /* Theme */,
 			);
 			path = Views;
 			sourceTree = "<group>";

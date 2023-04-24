@@ -50,8 +50,6 @@ struct DetailView: View {
             } header: {
                 Text("Attendees")
             }
-            
-            
         }
         .navigationTitle(scrum.title)
         .toolbar {
@@ -65,13 +63,11 @@ struct DetailView: View {
                 DetailEditView(scrum: $editingScrum)//編集viewに編集用データへのbindingを渡す
                     .navigationTitle(scrum.title)
                     .toolbar {
-                        
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Cancel") {
                                 isPresentingEditView = false
                             }
                         }
-                        
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Done") {
                                 isPresentingEditView = false
