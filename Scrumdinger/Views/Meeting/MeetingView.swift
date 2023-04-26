@@ -18,11 +18,8 @@ struct MeetingView: View {
             RoundedRectangle(cornerRadius: 16.0)
                 .foregroundColor(scrum.theme.mainColor)
             VStack {
-                MeetingHeaderView(secondsElapsed: scrumTimer.secondsElapsed,
-                                  secondRemaining: scrumTimer.secondsRemaining,
-                                  theme: scrum.theme)
-                Circle()
-                    .strokeBorder(lineWidth: 24)
+                MeetingHeaderView(secondsElapsed: scrumTimer.secondsElapsed,secondRemaining: scrumTimer.secondsRemaining,theme: scrum.theme)
+                MeetingTimerView(speakers: scrumTimer.speakers, theme: scrum.theme)
                 MeetingFooterView(speakers: scrumTimer.speakers, skipAction: scrumTimer.skipSpeaker)
             }
             
